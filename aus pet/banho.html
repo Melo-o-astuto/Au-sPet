@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Au'Petz - Banho e Tosa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #800080; /* Fundo roxo */
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #ff6600; /* Laranja */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #ff6600; /* Laranja */
+            color: white;
+        }
+        td {
+            color: #800080; /* Roxo */
+        }
+        .calendar-container {
+            margin-top: 20px;
+        }
+        .calendar-container input[type="date"],
+        .calendar-container input[type="time"],
+        .calendar-container button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #800080; /* Borda roxa */
+            border-radius: 4px;
+        }
+        .calendar-container button {
+            background-color: #ff6600; /* Laranja */
+            color: white;
+            cursor: pointer;
+        }
+        .calendar-container button:hover {
+            background-color: #cc5200; /* Laranja escuro */
+        }
+        #confirmacao {
+            color: #800080; /* Roxo */
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Banho e Tosa - Tabela de Preços</h1>
+        
+        <!-- Tabela de preços e tempos -->
+        <table>
+            <tr>
+                <th>Porte</th>
+                <th>Pequeno</th>
+                <th>Médio</th>
+                <th>Grande</th>
+            </tr>
+            <tr>
+                <td>Valor</td>
+                <td>R$ 40,00</td>
+                <td>R$ 60,00</td>
+                <td>R$ 80,00</td>
+            </tr>
+            <tr>
+                <td>Tempo Médio</td>
+                <td>30 min</td>
+                <td>45 min</td>
+                <td>60 min</td>
+            </tr>
+        </table>
+
+        <!-- Calendário para marcar horário -->
+        <div class="calendar-container">
+            <h2>Agende seu horário</h2>
+            <label for="date">Escolha a data:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Escolha o horário:</label>
+            <input type="time" id="time" required>
+
+            <button onclick="agendarHorario()">Marcar Horário</button>
+
+            <p id="confirmacao"></p>
+        </div>
+    </div>
+
+    <script>
+        function agendarHorario() {
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const confirmacao = document.getElementById("confirmacao");
+
+            if (date && time) {
+                confirmacao.textContent = `Horário marcado para ${date} às ${time}. Obrigado por agendar conosco!`;
+            } else {
+                confirmacao.textContent = "Por favor, selecione uma data e um horário.";
+            }
+        }
+    </script>
+</body>
+</html>
