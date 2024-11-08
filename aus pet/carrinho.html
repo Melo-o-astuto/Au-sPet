@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Compras - Au's Pets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Relatório de Compras</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="relatorio.html">Relatório de Compras</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="relatorio-compras">
+        <h2>Relatório de Compras</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID do Pedido</th>
+                    <th>Data</th>
+                    <th>Cliente</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço Unitário (R$)</th>
+                    <th>Valor Total (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>01/11/2024</td>
+                    <td>Maria Silva</td>
+                    <td>Ração para Cachorro</td>
+                    <td>2</td>
+                    <td>50,00</td>
+                    <td>100,00</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>02/11/2024</td>
+                    <td>Carlos Souza</td>
+                    <td>Brinquedo para Gato</td>
+                    <td>1</td>
+                    <td>25,00</td>
+                    <td>25,00</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>03/11/2024</td>
+                    <td>Luciana Mendes</td>
+                    <td>Aquário para Peixes</td>
+                    <td>1</td>
+                    <td>150,00</td>
+                    <td>150,00</td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+        
+        <div class="export-options">
+            <button onclick="exportarRelatorioPDF()">Exportar para PDF</button>
+            <button onclick="exportarRelatorioCSV()">Exportar para CSV</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Au's Pets. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function exportarRelatorioPDF() {
+            // Função para exportar a tabela como PDF
+            alert("Exportando para PDF...");
+            // Adicione lógica para exportação em PDF aqui
+        }
+
+        function exportarRelatorioCSV() {
+            // Função para exportar a tabela como CSV
+            alert("Exportando para CSV...");
+            // Adicione lógica para exportação em CSV aqui
+        }
+    </script>
+</body>
+</html>
